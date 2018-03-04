@@ -6,13 +6,7 @@ const SS = require('../lib/ss-bash')
 const router = new Route()
 
 router.get('/users', async (ctx, next) => {
-  const result = []
-  const { ports } = SS
-  for (const key in ports) {
-    result.push(Object.assign({ port: key }, ports[key]))
-  }
-
-  ctx.body = result
+  ctx.body = SS.ports
 
   return next()
 })
