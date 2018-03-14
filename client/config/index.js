@@ -13,7 +13,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       [`/${serverConfig.base}/api`]: {
-        target: `http://localhost:${serverConfig}/api`,
+        target: `http://localhost:${serverConfig.port}`,
         changeOrigin: true
       }
     },

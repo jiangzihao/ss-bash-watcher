@@ -4,7 +4,7 @@ import Vue from 'vue'
 import axios from 'axios'
 
 const resource = axios.create({
-  baseURL: '/api',
+  baseURL: '/watcher/api',
   validateStatus: () => true
 })
 
