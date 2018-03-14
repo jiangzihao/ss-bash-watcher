@@ -5,6 +5,6 @@ module.exports = {
     const start = new Date()
     await next()
     const end = new Date()
-    console.log(`${ctx.method} ${ctx.req.url} - ${end - start}ms`)
+    console.log(`${ctx.method}[${ctx.status}] ${ctx.req.url} - ${end - start}ms`)
   }
 }
